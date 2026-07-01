@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المقالات والمقابلات الصحفية والإعلامية - د. عدي سلطان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2557;
+    --navy-2:#1e3a8a;
+    --blue:#2563eb;
+    --blue-light:#eaf1ff;
+    --gold:#b8860b;
+    --text:#1f2937;
+    --muted:#5b6472;
+    --card-bg:#ffffff;
+    --bg:#f4f7fc;
+    --ring:0 10px 30px rgba(15,37,87,.08);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:'Tajawal',sans-serif;
+    background:
+      radial-gradient(1200px 500px at 20% -10%, #e7eefc 0%, transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, #eef3ff 0%, transparent 55%),
+      var(--bg);
+    color:var(--text);
+    line-height:1.8;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 60px;}
+
+  /* NAV */
+  nav.topnav{
+    background:linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 55%, var(--blue) 100%);
+    padding:14px 20px;
+    box-shadow:var(--ring);
+  }
+  nav.topnav .navwrap{
+    max-width:980px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;
+  }
+  nav.topnav .brand{
+    color:#fff;font-weight:800;font-size:1.05em;text-decoration:none;
+    display:flex;align-items:center;gap:8px;
+  }
+  nav.topnav .brand .dot{width:8px;height:8px;border-radius:50%;background:#facc15;display:inline-block;}
+  nav.topnav .brand-avatar{
+    width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:top center;
+    border:2px solid rgba(255,255,255,.55);
+  }
+  nav.topnav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap;}
+  nav.topnav a.link{
+    color:#dfe8ff;text-decoration:none;font-weight:500;font-size:.95em;
+    padding:8px 14px;border-radius:999px;transition:.25s;
+  }
+  nav.topnav a.link:hover{background:rgba(255,255,255,.14);color:#fff;}
+  nav.topnav a.link.active{background:#fff;color:var(--navy);font-weight:700;}
+
+  /* HERO */
+  .hero{
+    padding:56px 20px 30px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:44px;
+    flex-wrap:wrap-reverse;
+    text-align:center;
+  }
+  .hero-photo{
+    flex-shrink:0;
+    width:190px;height:190px;
+    border-radius:50%;
+    padding:6px;
+    background:linear-gradient(135deg,var(--gold),var(--blue));
+    box-shadow:0 18px 40px rgba(15,37,87,.18);
+  }
+  .hero-photo img{
+    width:100%;height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:top center;
+    border:4px solid #fff;
+    display:block;
+  }
+  .hero-text{max-width:520px;}
+  .hero .kicker{
+    display:inline-block;color:var(--gold);font-weight:700;letter-spacing:1px;
+    font-size:.85em;margin-bottom:14px;
+    border:1px solid #e8d6a3; background:#fffaf0; padding:6px 16px;border-radius:999px;
+  }
+  .hero h1{
+    font-size:2.1em;margin:0 0 12px;color:var(--navy);
+    font-weight:800;
+  }
+  .hero .subtitle{
+    color:var(--muted);font-size:1.1em;margin:0;
+    font-weight:500;
+  }
+  .hero .rule{
+    width:70px;height:4px;margin:22px auto 0;
+    background:linear-gradient(90deg,var(--gold),var(--blue));
+    border-radius:4px;
+  }
+  @media (min-width:640px){
+    .hero{text-align:right;justify-content:center;}
+    .hero .rule{margin:22px 0 0;}
+  }
+
+  /* CARDS GRID */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    margin-top:44px;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:18px;
+    padding:28px 24px;
+    box-shadow:var(--ring);
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    position:relative;
+    border:1px solid #eef1f8;
+    transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";
+    position:absolute; inset:0 0 auto 0; height:4px;
+    background:linear-gradient(90deg,var(--blue),var(--gold));
+    transform:scaleX(0); transform-origin:right;
+    transition:transform .35s ease;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(15,37,87,.14);
+    border-color:#dbe6ff;
+  }
+  .card:hover::before{transform:scaleX(1);}
+  .card .icon{
+    width:52px;height:52px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.5em;margin-bottom:16px;
+    background:var(--blue-light);color:var(--navy-2);
+  }
+  .card h2{
+    margin:0 0 8px;font-size:1.25em;color:var(--navy);font-weight:700;
+  }
+  .card p{margin:0 0 16px;color:var(--muted);font-size:.95em;}
+  .card .cta{
+    display:inline-flex;align-items:center;gap:6px;
+    color:var(--blue);font-weight:700;font-size:.95em;
+  }
+  .card .cta .arrow{transition:transform .25s;}
+  .card:hover .cta .arrow{transform:translateX(-4px);}
+  .card .count{
+    position:absolute; top:22px; left:24px;
+    background:var(--blue-light); color:var(--navy-2);
+    font-size:.78em; font-weight:700; padding:4px 10px; border-radius:999px;
+  }
+
+  footer{
+    text-align:center;color:var(--muted);font-size:.85em;
+    padding:30px 20px 10px;
+  }
+  footer .line{width:40px;height:2px;background:#dbe2f0;margin:0 auto 14px;}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="navwrap">
+    <a class="brand" href="index.html"><img class="brand-avatar" src="assets/profile.png" alt="د. عدي سلطان"> د. عدي سلطان</a>
+    <ul>
+      <li><a class="link active" href="index.html">الرئيسية</a></li>
+      <li><a class="link" href="articles.html">مقالات الرأي</a></li>
+      <li><a class="link" href="thawra-statements.html">صحيفة الثورة</a></li>
+      <li><a class="link" href="media-statements.html">تصريحات إعلامية</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <span class="kicker">أرشيف الأعمال الصحفية والإعلامية</span>
+      <h1>المقالات والمقابلات الصحفية والإعلامية</h1>
+      <p class="subtitle">الدكتور عدي سلطان — إعلامي وباحث في الاقتصاد والعلاقات الدولية</p>
+      <div class="rule"></div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/profile.png" alt="الدكتور عدي سلطان">
+    </div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="articles.html">
+      <span class="count">9 مقالات</span>
+      <div class="icon">📝</div>
+      <h2>مقالات الرأي</h2>
+      <p>مقالات وتحليلات اقتصادية منشورة في صحيفة سفير برس، تغطي قضايا الطاقة، الذهب، سعر الصرف، وأسواق النفط.</p>
+      <span class="cta">عرض مقالات الرأي <span class="arrow">←</span></span>
+    </a>
+
+    <a class="card" href="thawra-statements.html">
+      <span class="count">5 مقالات</span>
+      <div class="icon">📰</div>
+      <h2>تصريحات صحيفة الثورة</h2>
+      <p>آراء وتحليلات اقتصادية نُشرت في صحيفة الثورة السورية حول التحكيم الدولي، الاستثمار العربي، والشأن العام.</p>
+      <span class="cta">عرض تصريحات الثورة <span class="arrow">←</span></span>
+    </a>
+
+    <a class="card" href="media-statements.html">
+      <span class="count">3 تصريحات</span>
+      <div class="icon">📢</div>
+      <h2>تصريحات إعلامية وندوات</h2>
+      <p>تصريحات ومقابلات في لبنان 24، إضافة إلى ندوات ومقالات أرشيفية في وكالة سانا حول الاقتصاد السوري.</p>
+      <span class="cta">عرض التصريحات الإعلامية <span class="arrow">←</span></span>
+    </a>
+  </div>
+
+  <footer>
+    <div class="line"></div>
+    أرشيف رقمي لأعمال الدكتور عدي سلطان — يُحدَّث دورياً
+  </footer>
+</div>
+
+</body>
+</html>
